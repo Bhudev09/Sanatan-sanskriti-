@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>साधना से सिद्धियाँ</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-yellow-100 py-4 shadow">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-2xl font-bold">साधना से सिद्धियाँ</h1>
+      <nav class="space-x-4">
+        <a href="#home" class="hover:underline">होम</a>
+        <a href="#blog" class="hover:underline">साधना/मंत्र</a>
+        <a href="#shop" class="hover:underline">शॉप</a>
+        <a href="#videos" class="hover:underline">वीडियो</a>
+        <a href="#contact" class="hover:underline">संपर्क</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-yellow-50 py-12">
+  <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-2">आज की साधना / आज का मंत्र</h2>
+      <p class="mb-4">अपने दैनिक आध्यात्मिक जीवन को संवारें</p>
+      <button class="bg-yellow-400 px-4 py-2 rounded">न्यूज़लेटर सब्सक्राइब करें</button>
+    </div>
+  </section>
+<!-- Festival Countdown -->
+<section class="py-8 bg-yellow-50">
+  <div class="container mx-auto px-4 text-center">
+    <h3 class="text-2xl font-bold mb-4">नवरात्रि काउंटडाउन</h3>
+    <p id="countdown" class="text-xl font-semibold"></p>
+  </div>
+</section>
+<!-- आज का मंत्र Section -->
+<section class="bg-yellow-50 py-12">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4">🙏 आज का मंत्र 🙏</h2>
+    <p id="today-mantra" class="text-xl text-gray-700">
+      ॐ नमः शिवाय
+    </p>
+  </div>
+</section>
+
+<!-- YouTube Videos Section -->
+<section class="bg-white py-12">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8">🎥 हमारे वीडियो देखें</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Video 1 -->
+      <div class="aspect-w-16 aspect-h-9">
+        <iframe class="w-full h-64 rounded-xl shadow"
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+          title="YouTube video" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <!-- Video 2 -->
+      <div class="aspect-w-16 aspect-h-9">
+        <iframe class="w-full h-64 rounded-xl shadow"
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID2"
+          title="YouTube video" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Subscription Section -->
+<section class="bg-indigo-50 py-12">
+  <div class="max-w-3xl mx-auto text-center px-4">
+    <h2 class="text-3xl font-bold mb-4">📩 हमारे न्यूज़लेटर से जुड़ें</h2>
+    <p class="mb-6 text-gray-700">Festivals, Mantras और Special Offers के अपडेट पाने के लिए अपना ईमेल डालें</p>
+    <form class="flex flex-col md:flex-row gap-4 justify-center">
+      <input type="email" placeholder="अपना ईमेल दर्ज करें" class="p-3 rounded-lg border w-full md:w-2/3">
+      <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+
+</section>
+
+<!-- Donation QR Section -->
+<section class="py-8 bg-yellow-100">
+  <div class="container mx-auto px-4 text-center">
+    <h3 class="text-2xl font-bold mb-4">आध्यात्मिक सेवा / Donation</h3>
+    <p>नीचे स्कैन करके योगदान करें:</p>
+    <img src="qr.png" alt="Donation QR" class="mx-auto w-48 mt-4">
+  </div>
+</section>
+
+<!-- Countdown Script -->
+<script>
+  // Navratri Date Set करें (Year, Month-1, Day)
+  var countDownDate = new Date(\"October 3, 2025 00:00:00\").getTime();
+  var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById(\"countdown\").innerHTML =
+      days + \" दिन \" + hours + \" घंटे \" + minutes + \" मिनट \" + seconds + \" सेकंड \";
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById(\"countdown\").innerHTML = \"नवरात्रि शुरू हो चुकी है!\";
+    }
+  }, 1000);
+</script>
+
+
+  <!-- Trending Posts -->
+  <section class="py-8 bg-white">
+    <div class="container mx-auto px-4">
+      <h3 class="text-2xl font-bold mb-4">Trending साधना</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-4 bg-yellow-100 rounded shadow">भैरव साधना</div>
+        <div class="p-4 bg-yellow-100 rounded shadow">नवदुर्गा साधना</div>
+        <div class="p-4 bg-yellow-100 rounded shadow">चंडी पाठ</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="py-8 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h3 class="text-2xl font-bold mb-4">साधना / मंत्र ब्लॉग</h3>
+      <p>हर साधना के लिए अलग-अलग पोस्ट/आर्टिकल (Placeholder)</p>
+    </div>
+  </section>
+
+  <!-- Shop Section -->
+  <section id="shop" class="py-8 bg-white">
+    <div class="container mx-auto px-4">
+      <h3 class="text-2xl font-bold mb-4">पूजा सामग्री / यंत्र शॉप</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-4 bg-yellow-50 rounded shadow">रुद्राक्ष</div>
+        <div class="p-4 bg-yellow-50 rounded shadow">माला</div>
+        <div class="p-4 bg-yellow-50 rounded shadow">दीपक / धूप</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos Section -->
+  <section id="videos" class="py-8 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h3 class="text-2xl font-bold mb-4">वीडियो / मीडिया गैलरी</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="aspect-w-16 aspect-h-9">
+          <iframe class="w-full h-64" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="aspect-w-16 aspect-h-9">
+          <iframe class="w-full h-64" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section Placeholder -->
+  <section id="courses" class="py-8 bg-white">
+    <div class="container mx-auto px-4">
+      <h3 class="text-2xl font-bold mb-4">कोर्स / ई-बुक्स</h3>
+      <p>फ्री + Paid कंटेंट Placeholder</p>
+    </div>
+  </section>
+
+  <!-- Testimonials Placeholder -->
+  <section id="testimonials" class="py-8 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h3 class="text-2xl font-bold mb-4">अनुभव / Testimonials</h3>
+      <p>लोगों के अनुभव Placeholder</p>
+    </div>
+  </section>
+<!-- Donation Section -->
+<section class="bg-yellow-50 py-10">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-4">🙏 आध्यात्मिक सेवा हेतु योगदान</h2>
+    <p class="mb-4">UPI QR कोड स्कैन करें या Donate बटन दबाएँ</p>
+
+    <!-- QR Code Image -->
+    <img src="images/upi-qr.jpg" alt="UPI QR Code" class="mx-auto w-48 h-48 mb-4 rounded-lg shadow-lg">
+
+    <!-- Button -->
+    <a href="upi://pay?pa=yourupi@upi&pn=YourName&am=0" 
+       class="bg-green-600 text-white px-6 py-2 rounded-lg shadow-lg hover:bg-green-700">
+       अभी Donate करें
+    </a>
+  </div>
+</section>
+
+  <!-- Newsletter / Subscription -->
+  <section id="newsletter" class="py-8 bg-yellow-100">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-2xl font-bold mb-4">न्यूज़लेटर / SMS सब्सक्रिप्शन</h3>
+      <input type="email" placeholder="अपना ईमेल दर्ज करें" class="px-4 py-2 rounded border">
+      <button class="bg-yellow-400 px-4 py-2 rounded ml-2">सब्सक्राइब</button>
+    </div>
+  </section>
+<!-- Shop / Products Section -->
+<section class="bg-white py-12">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8">🛍️ हमारी आध्यात्मिक दुकान</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Product 1 -->
+      <div class="bg-gray-50 rounded-xl shadow p-4 text-center">
+        <img src="images/product1.jpg" alt="Rudraksha Mala" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold">रुद्राक्ष माला</h3>
+        <p class="text-gray-700 mb-2">108 बीज रुद्राक्ष</p>
+        <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Add to Cart</button>
+      </div>
+      <!-- Product 2 -->
+      <div class="bg-gray-50 rounded-xl shadow p-4 text-center">
+        <img src="images/product2.jpg" alt="Yantra" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold">श्री यंत्र</h3>
+        <p class="text-gray-700 mb-2">पूजा के लिए उत्तम</p>
+        <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Add to Cart</button>
+      </div>
+      <!-- Product 3 -->
+      <div class="bg-gray-50 rounded-xl shadow p-4 text-center">
+        <img src="images/product3.jpg" alt="Book" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold">भैरव साधना गाइड</h3>
+        <p class="text-gray-700 mb-2">Step by Step</p>
+        <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Second Festival Countdown -->
+<section class="bg-purple-50 py-10">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-4">🕉️ अगला पर्व: महाशिवरात्रि Countdown</h2>
+    <div id="countdown2" class="text-2xl font-semibold text-purple-700"></div>
+<script src="js/festival-countdown.js"></script>
+
+  </div>
+</section>
+
+
+  <!-- Contact / About -->
+  <section id="contact" class="py-8 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h3 class="text-2xl font-bold mb-4">हमसे संपर्क करें</h3>
+      <p>About + Contact Form Placeholder</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-yellow-200 py-4 text-center">
+    <p>&copy; 2025 साधना से सिद्धियाँ | सभी अधिकार सुरक्षित</p>
+  </footer>
+<script src="js/countdown.js"></script>
+<!-- Floating WhatsApp Chat Button -->
+<a href="https://wa.me/919979415908" target="_blank"
+   class="fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg flex items-center space-x-2">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M20.52 3.48A11.78 11.78 0 0012 0C5.37 0 0 5.37 0 12a11.92 11.92 0 001.59 5.93L0 24l6.3-1.65A11.84 11.84 0 0012 24c6.63 0 12-5.37 12-12a11.79 11.79 0 00-3.48-8.52zM12 22a9.8 9.8 0 01-5.2-1.48l-.37-.22-3.74.97 1-3.64-.24-.38A9.8 9.8 0 012 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm5.06-7.07c-.28-.14-1.65-.82-1.91-.91-.26-.09-.45-.14-.64.14-.19.28-.74.91-.91 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.38-.83-.74-1.38-1.65-1.54-1.93-.17-.28-.02-.43.12-.57.12-.12.28-.31.43-.45.14-.14.19-.24.28-.4.09-.17.05-.31-.02-.45-.07-.14-.64-1.55-.88-2.12-.23-.56-.47-.49-.64-.5-.16-.01-.34-.01-.52-.01s-.48.07-.74.35c-.26.28-1 1-1 2.43 0 1.43 1.02 2.81 1.17 3 .14.19 2 3.05 4.88 4.28.68.29 1.21.47 1.62.6.68.22 1.3.19 1.79.12.55-.08 1.65-.67 1.88-1.32.23-.65.23-1.21.16-1.33-.07-.12-.26-.19-.54-.33z"/>
+  </svg>
+  <span>WhatsApp</span>
+</a>
+
+</body>
+</html>

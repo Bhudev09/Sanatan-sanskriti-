@@ -1,0 +1,26 @@
+// festival-countdown.js
+
+// जिस तारीख तक countdown चाहिए (अपनी festival की तारीख डालो)
+const festivalDate = new Date("March 1, 2025 00:00:00").getTime();
+
+const countdownFunction2 = setInterval(function () {
+  const now = new Date().getTime();
+  const distance = festivalDate - now;
+
+  // दिन, घंटे, मिनट, सेकंड निकालना
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown2").innerHTML =
+    days + " दिन " + hours + " घंटे " + minutes + " मिनट " + seconds + " सेकंड ";
+
+  // टाइम खत्म होने के बाद
+  if (distance < 0) {
+    clearInterval(countdownFunction2);
+    document.getElementById("countdown2").innerHTML = "🌸 पर्व शुरू हो गया!";
+  }
+}, 1000);
